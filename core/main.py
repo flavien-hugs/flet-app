@@ -2,13 +2,15 @@
 app entrypoint
 """
 
+from time import sleep
+
 from flet import(
     Page, Checkbox,
     Column, Row, icons,
     FloatingActionButton,
     TextField, UserControl,
     Tabs, Tab, Text, ButtonStyle,
-    OutlinedButton
+    OutlinedButton, ProgressBar
 )
 from flet.buttons import CountinuosRectangleBorder as CRB
 
@@ -117,10 +119,17 @@ class TodoApp(UserControl):
 
 
 def mainApp(page: Page):
+    page.splash = ProgressBar()
+    sleep(3)
+    page.splash = None
+
     page.title = "Todo App"
+    page.auto_scroll = True
+    page.theme_mode = "light"
     page.horizontal_alignment = "center"
     page.vertical_alignment = "center"
     page.pwa
+
     page.update()
 
     """
