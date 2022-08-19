@@ -1,9 +1,7 @@
 import flet
 
-from main import main
+from core import mainApp
 
-port = 8550
-target = main
-view = flet.WEB_BROWSER
+target = mainApp
 
-flet.app(port=port, target=target, view=view)
+flet.app(target=target)
