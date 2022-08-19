@@ -7,8 +7,10 @@ from flet import(
     Column, Row, icons,
     FloatingActionButton,
     TextField, UserControl,
-    Tabs, Tab, Text, OutlinedButton
+    Tabs, Tab, Text, ButtonStyle,
+    OutlinedButton
 )
+from flet.buttons import CountinuosRectangleBorder
 
 from core import Task
 
@@ -62,6 +64,10 @@ class TodoApp(UserControl):
                                 self.items_left,
                                 OutlinedButton(
                                     text="Clear completed",
+                                    style=ButtonStyle(
+                                        shape=CountinuosRectangleBorder(
+                                            radius=10)
+                                    ),
                                     on_click=self.clear_clicked
                                 )
                             ]
