@@ -114,6 +114,7 @@ class TodoApp(UserControl):
 def main(page: Page):
     page.title = "Todo App"
     page.horizontal_alignment = "center"
+    page.vertical_alignment = "center"
     page.pwa
     page.update()
 
