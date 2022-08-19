@@ -10,7 +10,7 @@ from flet import(
     Tabs, Tab, Text, ButtonStyle,
     OutlinedButton
 )
-from flet.buttons import CountinuosRectangleBorder
+from flet.buttons import CountinuosRectangleBorder as CRB
 
 from core import Task
 
@@ -65,8 +65,7 @@ class TodoApp(UserControl):
                                 OutlinedButton(
                                     text="Clear completed",
                                     style=ButtonStyle(
-                                        shape=CountinuosRectangleBorder(
-                                            radius=10)
+                                        shape=CRB(radius=10)
                                     ),
                                     on_click=self.clear_clicked
                                 )
